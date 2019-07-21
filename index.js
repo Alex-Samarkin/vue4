@@ -1,9 +1,10 @@
 Vue.component('table-header', {
-  template: '<h4 align="right">Заголовок таблицы N {{table_number}}</h4>',
+
   data: function () {
     table_number: 0;
     table_h: 'Таблица со списком пациентов';
-  }
+  },
+  template: '<h4 align="right">Заголовок таблицы N {{table_number}}</h4>'
 })
 
 var app = new Vue({
