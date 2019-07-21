@@ -9,19 +9,21 @@
     <h1 id="header1">Vue 3</h1>
     <hr />
     <div id="app">
-      <table border="2px" width="90%">
+      <table id="table1" width="90%">
         <thead id="header1">
           <td>{{ person.id }}</td>
           <td>{{ person.fio }}</td>
           <td>{{ person.age }}</td>
           <td>{{ person.gender }}</td>
         </thead>
-        <tr v-for="person in persons">
-          <td>{{ person.id }}</td>
-          <td>{{ person.fio }}</td>
-          <td>{{ person.age }}</td>
-          <td>{{ person.gender }}</td>
-        </tr>
+        <tbody>
+          <tr v-for="person in persons">
+            <td id="table2">{{ person.id }}</td>
+            <td id="table2">{{ person.fio }}</td>
+            <td id="table2">{{ person.age }}</td>
+            <td id="table2">{{ person.gender }}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
 
