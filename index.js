@@ -1,3 +1,7 @@
+Vue.component('table-header', {
+  template: '<h4 align="right">Заголовок таблицы</h4>'
+})
+
 var app = new Vue({
   el: "#app",
   data: {
@@ -7,8 +11,7 @@ var app = new Vue({
       gender: "Пол пациента",
       age: "Возраст"
     },
-    persons: [
-      {
+    persons: [{
         id: 1,
         fio: "Иванов Иван Иванович",
         gender: "m",
