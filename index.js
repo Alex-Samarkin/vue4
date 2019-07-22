@@ -1,11 +1,7 @@
 Vue.component('table-header', {
 
-  data: function () {
-    return {
-      table_number: 1,
-      table_h: 'Таблица со списком пациентов'
-    }
-  },
+  props: ['table_h', 'table_number'],
+
   template: '<h4 align="right">Заголовок таблицы N {{table_number}} {{table_h}}</h4>'
 })
 
