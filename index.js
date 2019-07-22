@@ -7,24 +7,24 @@ Vue.component("table-header", {
 });
 
 Vue.component("table-first", {
-  props: ['person', 'persons'],
+  props: ["head", "data"],
 
-  template: '\
-   <table id="table1" width="90%">\
-    < thead >\
-    <th>{{ person.id }}</th>\
-    <th>{{ person.fio }}</th>\
-    <th>{{ person.age }}</th>\
-    <th>{{ person.gender }}</th>\
-        </thead>\
-  <tr v-for="person in persons">\
+  template: '<table id="table1" width="90%">\
+  <thead>\
+    <th>{{ head.id }}</th>\
+    <th>{{ head.fio }}</th>\
+    <th>{{ head.age }}</th>\
+    <th>{{ head.gender }}</th>\
+  </thead>\
+  <tbody>\
+  <tr v-for="person in data">\
     <td id="table2">{{ person.id }}</td>\
     <td id="table2">{{ person.fio }}</td>\
     <td id="table2">{{ person.age }}</td>\
     <td id="table2">{{ person.gender }}</td>\
   </tr>\
-      </table >\
-  '
+  </tbody>\
+  </table>'
 });
 
 var app = new Vue({
