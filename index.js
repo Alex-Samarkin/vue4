@@ -1,9 +1,14 @@
-Vue.component('table-header', {
-
-  props: ['table_h', 'table_number'],
+Vue.component("table-header", {
+  props: ["table_h", "table_number"],
 
   template: '<h4 align="right">Заголовок таблицы N {{table_number}} {{table_h}}</h4>'
-})
+});
+
+Vue.component("table-first", {
+  props: ["id", "fio", "age", "gender"],
+
+  template: "<tr><td>{{id}}</td><td>{{fio}}</td><td>{{age}}</td><td>{{gender}}</td></tr>"
+});
 
 var app = new Vue({
   el: "#app",

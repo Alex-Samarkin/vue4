@@ -11,20 +11,18 @@
     <div id="app">
       <table-header table_h="Пациенты" table_number="10"></table-header>
       <table id="table1" width="90%">
-        <thead id="header1">
-          <td>{{ person.id }}</td>
-          <td>{{ person.fio }}</td>
-          <td>{{ person.age }}</td>
-          <td>{{ person.gender }}</td>
+        <thead>
+          <th>{{ person.id }}</th>
+          <th>{{ person.fio }}</th>
+          <th>{{ person.age }}</th>
+          <th>{{ person.gender }}</th>
         </thead>
-        <tbody>
-          <tr v-for="person in persons">
-            <td id="table2">{{ person.id }}</td>
-            <td id="table2">{{ person.fio }}</td>
-            <td id="table2">{{ person.age }}</td>
-            <td id="table2">{{ person.gender }}</td>
-          </tr>
-        </tbody>
+        <tr v-for="person in persons">
+          <td id="table2">{{ person.id }}</td>
+          <td id="table2">{{ person.fio }}</td>
+          <td id="table2">{{ person.age }}</td>
+          <td id="table2">{{ person.gender }}</td>
+        </tr>
       </table>
     </div>
 
