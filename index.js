@@ -1,3 +1,5 @@
+/*jshint multistr: true */
+
 Vue.component("table-header", {
   props: ["table_h", "table_number"],
 
@@ -5,9 +7,24 @@ Vue.component("table-header", {
 });
 
 Vue.component("table-first", {
-  props: ["id", "fio", "age", "gender"],
+  props: ['person', 'persons'],
 
-  template: "<tr><td>{{id}}</td><td>{{fio}}</td><td>{{age}}</td><td>{{gender}}</td></tr>"
+  template: '\
+   <table id="table1" width="90%">\
+    < thead >\
+    <th>{{ person.id }}</th>\
+    <th>{{ person.fio }}</th>\
+    <th>{{ person.age }}</th>\
+    <th>{{ person.gender }}</th>\
+        </thead>\
+  <tr v-for="person in persons">\
+    <td id="table2">{{ person.id }}</td>\
+    <td id="table2">{{ person.fio }}</td>\
+    <td id="table2">{{ person.age }}</td>\
+    <td id="table2">{{ person.gender }}</td>\
+  </tr>\
+      </table >\
+  '
 });
 
 var app = new Vue({
